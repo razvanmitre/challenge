@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  test-api:
+    build: .
+    ports:
+      - "80:80"
+    env_file: .env
+    links:
+      - test-redis
+
+  test-redis:
+    expose:
+      - '6379'
+    image: 'redis:5'
+    restart: always
+    volumes:
+      - ./data/redis:/data

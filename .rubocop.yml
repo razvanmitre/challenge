@@ -1,0 +1,13 @@
+require:
+  - rubocop-rails
+
+Bundler/OrderedGems:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Layout/LineLength:
+  Max: 160
